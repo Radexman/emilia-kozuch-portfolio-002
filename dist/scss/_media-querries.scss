@@ -1,0 +1,42 @@
+// ===== Media querries for mobile version ===== //
+
+@media screen and (max-width: 768px) {
+	.article {
+		grid-template-columns: 1fr;
+		padding-inline: 1.2em;
+
+		.article__image {
+			grid-row: 1;
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			box-shadow: clamp(40px, 2vw, 60px) clamp(-40px, -5vw, 60px) 0 $clr-transparent;
+		}
+
+		.article__image:nth-child(0) {
+			content: url(/dist/assets/images/profile-picture-mini.jpg);
+		}
+
+		.article__image:nth-child(1) {
+			margin-top: 3em;
+			box-shadow: clamp(-40px, -15vw, -60px) clamp(40px, 5vw, 60px) 0 $clr-transparent;
+		}
+
+		.section__h2 {
+			text-align: center;
+		}
+	}
+	h2 {
+		text-align: center;
+	}
+
+	.address__button {
+		width: 80vw;
+	}
+
+	.article-accordion {
+		.accordion .accordion__box.active .box__content {
+			height: 200px;
+		}
+	}
+}

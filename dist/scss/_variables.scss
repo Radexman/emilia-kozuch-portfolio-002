@@ -1,0 +1,60 @@
+// ===== SCSS Variables and mixins ===== //
+
+// Colors
+$clr-brand: #60725d;
+$clr-primary: #f0ffec;
+$clr-secondary: #5d7266;
+$clr-txt-dark: #1b1b1b;
+$clr-txt-light: #f2f2f2;
+$clr-support: #262626;
+$clr-transparent: #5458535e;
+
+// Typography
+$font-brand: 'PT Serif', serif;
+$font-primary: 'Titillium Web', sans-serif;
+$font-secondary: 'Noto Sans', sans-serif;
+
+// Borders
+$border-radius-small: 2px;
+$border-radius-big: 1em;
+
+// Transitions
+$transition-fast: 150ms ease-in;
+$transition-slow: 500ms ease-in-out;
+
+// Shadows
+$bottom-shadow: 1px 2px 7px #000;
+
+// Mixins
+
+@mixin vertical-line-right {
+	content: '';
+	width: 6px;
+	right: clamp(-13px, -4vw, -80px);
+	height: 200px;
+	top: 50px;
+	background-color: $clr-transparent;
+	position: absolute;
+	z-index: -1;
+}
+
+@mixin horizontal-line-left {
+	content: '';
+	width: 2px;
+	bottom: -100px;
+	width: 50px;
+	height: 3px;
+	left: 0;
+	background-color: $clr-txt-dark;
+	position: absolute;
+	z-index: -1;
+}
+
+@mixin subheading {
+	font-size: 2rem;
+	font-style: italic;
+	letter-spacing: 3px;
+	margin-bottom: 0.5em;
+	color: $clr-support;
+	border-bottom: 2px solid $clr-brand;
+}

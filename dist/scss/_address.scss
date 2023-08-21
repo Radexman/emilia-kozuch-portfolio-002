@@ -1,0 +1,54 @@
+.article-contakt {
+	min-height: 100vh;
+	padding: 2em 1em;
+
+	.section {
+		text-align: justify;
+		&__h2 {
+			@include subheading;
+
+			&::first-letter {
+				font-size: 3rem;
+			}
+		}
+
+		&__h3 {
+			text-align: center;
+			margin-top: 1rem;
+		}
+	}
+}
+
+.address {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+	font-style: normal;
+	margin-top: 1.5rem;
+
+	&__button {
+		background-color: $clr-secondary;
+		color: $clr-txt-light;
+		padding: 0.5em 1.5em;
+		border-radius: 5px;
+		text-align: center;
+		transition: $transition-fast;
+		min-width: 90%;
+
+		&:hover {
+			background-color: $clr-support;
+		}
+
+		&:active {
+			background-color: $clr-secondary;
+		}
+	}
+}
+
+.address__section {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	margin: 0.7rem;
+}

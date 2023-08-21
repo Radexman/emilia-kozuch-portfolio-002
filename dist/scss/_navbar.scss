@@ -1,0 +1,73 @@
+// ===== Sticky navbar section ===== //
+
+.nav {
+	max-height: 10vh;
+	box-shadow: $bottom-shadow;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1em;
+	width: 100%;
+	position: sticky;
+	background-color: $clr-txt-light;
+	color: $clr-txt-dark;
+	top: 0;
+	z-index: 2;
+
+	.title__h1 {
+		font-family: $font-brand;
+		transition: $transition-fast;
+		color: $clr-txt-dark;
+		font-weight: 700;
+
+		&:hover {
+			color: $clr-brand;
+		}
+	}
+
+	.navlinks {
+		list-style-type: none;
+		display: flex;
+		gap: 1.2em;
+		font-family: $font-primary;
+
+		&__navlink {
+			font-size: 0.7rem;
+			transition: $transition-fast;
+
+			&:hover {
+				color: $clr-secondary;
+				font-weight: 700;
+			}
+		}
+	}
+
+	.hamburger {
+		width: 34px;
+		height: 34px;
+		outline: 3px solid #000;
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		justify-content: space-evenly;
+		border-radius: $border-radius-small;
+		cursor: pointer;
+		position: relative;
+		right: 5px;
+		transition: $transition-fast;
+		display: none;
+		z-index: 2;
+
+		&:hover {
+			background-color: $clr-brand;
+		}
+
+		&__bar {
+			width: 80%;
+			height: 3px;
+			background-color: $clr-txt-dark;
+			border-radius: $border-radius-small;
+			transition: $transition-fast;
+		}
+	}
+}

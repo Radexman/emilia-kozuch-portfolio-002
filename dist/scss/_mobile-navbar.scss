@@ -1,0 +1,57 @@
+// This media querry toggles hamburger navbar
+// and makes small animation. This flips navbar
+// horizontally and makes it responsive.
+
+@media screen and (max-width: 768px) {
+	.nav {
+		.hamburger {
+			display: flex;
+		}
+
+		.hamburger--active .hamburger__bar:nth-child(2) {
+			opacity: 0;
+		}
+
+		.hamburger--active .hamburger__bar:nth-child(1) {
+			transform: translateY(9px) rotate(45deg);
+		}
+
+		.hamburger--active .hamburger__bar:nth-child(3) {
+			transform: translateY(-9px) rotate(-45deg);
+		}
+
+		.navlinks {
+			position: fixed;
+			z-index: 1;
+			top: -100%;
+			flex-flow: column nowrap;
+			background-color: $clr-txt-light;
+			width: 100%;
+			text-align: center;
+			transition: $transition-slow;
+			border-bottom: 1px solid $clr-brand;
+			left: 0px;
+			box-shadow: $bottom-shadow;
+			gap: 0;
+			cursor: pointer;
+
+			&__navlink {
+				padding: 0.7em 0;
+				font-size: 1rem;
+				font-weight: 700;
+				min-width: 100vw;
+				transition: $transition-fast;
+				border-bottom: 2px solid $clr-txt-dark;
+
+				&:hover {
+					background-color: $clr-brand;
+					color: $clr-txt-light;
+				}
+			}
+		}
+
+		.navlinks--active {
+			top: 0;
+		}
+	}
+}

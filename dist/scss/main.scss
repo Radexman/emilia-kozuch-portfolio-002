@@ -1,0 +1,70 @@
+// ===== SCSS Partials, CSS reset, utilitity classes font imports ===== //
+@import './_variables.scss';
+@import './navbar';
+@import './mobile-navbar';
+@import './header';
+@import './article';
+@import './accordion';
+@import './address';
+@import './footer';
+@import './media-querries';
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font: inherit;
+}
+
+html {
+	color-scheme: dark light;
+	scroll-behavior: smooth;
+	font-size: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+img,
+picture,
+svg,
+video {
+	display: block;
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+strong {
+	font-weight: bolder;
+}
+
+body {
+	min-height: 100vh;
+	background-color: $clr-txt-light;
+	font-family: $font-primary;
+	overflow-x: hidden;
+}
+
+.main {
+	color: $clr-txt-dark;
+}
+
+h2 {
+	font-family: $font-brand;
+}
+
+p {
+	font-family: $font-secondary;
+	font-size: 0.7rem;
+	line-height: 1.5;
+}
